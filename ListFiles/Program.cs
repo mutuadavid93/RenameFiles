@@ -11,9 +11,9 @@ namespace ListFiles
     {
         static void Main(string[] args)
         {
-            string targetDir = @"G:\LYNDATUTS\Typescript Essential Training";
-            string cloneDir = targetDir + @"G:\LYNDATUTS\Typescript Essentials";
-            listFilesInDir(targetDir, cloneDir);
+            string srcPath = @"G:\LYNDATUTS\React Web Interface";
+            string destPath = @"";
+            listFilesInDir(srcPath, destPath); //invoke
 
             // Keep the Console Window open
             Console.WriteLine("Press Enter to Close");
