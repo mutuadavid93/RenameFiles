@@ -1,0 +1,6 @@
+c:\users\street money\documents\visual studio 2015\Projects\ListFiles\ListFiles\bin\Debug\ListFiles.exe.config
+c:\users\street money\documents\visual studio 2015\Projects\ListFiles\ListFiles\bin\Debug\ListFiles.exe
+c:\users\street money\documents\visual studio 2015\Projects\ListFiles\ListFiles\bin\Debug\ListFiles.pdb
+c:\users\street money\documents\visual studio 2015\Projects\ListFiles\ListFiles\obj\Debug\ListFiles.csprojResolveAssemblyReference.cache
+c:\users\street money\documents\visual studio 2015\Projects\ListFiles\ListFiles\obj\Debug\ListFiles.exe
+c:\users\street money\documents\visual studio 2015\Projects\ListFiles\ListFiles\obj\Debug\ListFiles.pdb
