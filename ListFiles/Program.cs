@@ -11,8 +11,10 @@ namespace ListFiles
     {
         static void Main(string[] args)
         {
-            string srcPath = @"G:\LYNDATUTS\React Web Interface";
-            string destPath = @"";
+            string srcPath = @"\\STREETMONEY\Nodejs\Building a Website in Node.js and Express.js";
+            string destPath = /*srcPath.Split('\\')[0] +*/ @"G:\HONEYPOT\" + srcPath.Split('\\').Last();
+            Directory.CreateDirectory(destPath); // Construct Path
+
             listFilesInDir(srcPath, destPath); //invoke
 
             // Keep the Console Window open
@@ -24,18 +26,25 @@ namespace ListFiles
         {
             var files = new DirectoryInfo(WorkDir).GetFiles("*.mp4", SearchOption.TopDirectoryOnly);
 
-            foreach (FileInfo file in files)
+            try
             {
-                var x = file.Name;
-                string realName = x.Split('-')[0];
+                foreach (FileInfo file in files)
+                {
+                    var x = file.Name;
+                    string realName = x.Split('-')[0];
 
-                var fullPath = WorkDir + @"\" +x;
-                string suffix = new String(x.ToCharArray().Where(c => Char.IsDigit(c)).ToArray());
-                // suffix is fine
-                File.Move(fullPath, newDir + @"\" + suffix+"-"+ realName + ".mp4");
+                    var fullPath = WorkDir + @"\" + x;
+                    string suffix = new String(x.ToCharArray().Where(c => Char.IsDigit(c)).ToArray());
+                    // suffix is fine
+                    File.Copy(fullPath, newDir + @"\" + suffix + "-" + realName + ".mp4");
+                }
+
+                Console.WriteLine("Mission ^_^ Complete");
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
-
-            Console.WriteLine("Mission ^_^ Complete");
+            
         }
     }
 }
